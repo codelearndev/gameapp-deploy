@@ -1,10 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Teste</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Learn - Aprenda programação de maneira simples</title>
+    <base href="/" />
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="~/monaco/min/vs/editor/editor.main.css">
+    <link rel="icon" type="image/png" href="./images/icon.png" />
+    <link href="CodeLearnGame.WebApp.styles.css" rel="stylesheet" />
 </head>
+
 <body>
-    <h1>Olá mundo!</h1>
+    <div id="app">
+    </div>
+    
+    
+    <script src="./monaco/min/vs/loader.js"></script>
+    <script>
+        require.config({
+            paths: {
+                "vs": "./monaco/min/vs"   
+            }
+        })
+    </script>
+    <script src="./monaco/min/vs/editor/editor.main.nls.js"></script>
+    <script src="./monaco/min/vs/editor/editor.main.js"></script>    
+    <script src="./js/code-editor.js"></script>    
+    
+    <script src="_framework/blazor.webassembly.js"></script>
+    <script src="./js/learn.js"></script>
+    <script src="./js/utils.js"></script>
 </body>
+
 </html>
