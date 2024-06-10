@@ -7,32 +7,31 @@
     <title>Code Learn - Aprenda programação de maneira simples</title>
     <base href="/" />
     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/app.css" />
-    <link rel="stylesheet" href="~/monaco/min/vs/editor/editor.main.css">
-    <link rel="icon" type="image/png" href="./images/icon.png" />
-    <link href="CodeLearnGame.WebApp.styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="_content/CodeLearnGame.Common/css/app.css" />
+    <link rel="stylesheet" href="_content/CodeLearnGame.Common/monaco/min/vs/editor/editor.main.css">
+    <link rel="icon" type="image/png" href="_content/CodeLearnGame.Common/images/icon.png" />
+    <link href="CodeLearnGame.Web.styles.css" rel="stylesheet" />
 </head>
 
 <body>
-    <div id="app">
-    </div>
-    
-    
-    <script src="./monaco/min/vs/loader.js"></script>
-    <script>
-        require.config({
-            paths: {
-                "vs": "./monaco/min/vs"   
-            }
-        })
-    </script>
-    <script src="./monaco/min/vs/editor/editor.main.nls.js"></script>
-    <script src="./monaco/min/vs/editor/editor.main.js"></script>    
-    <script src="./js/code-editor.js"></script>    
-    
-    <script src="_framework/blazor.webassembly.js"></script>
-    <script src="./js/learn.js"></script>
-    <script src="./js/utils.js"></script>
+<div id="app">
+</div>
+
+<script src="_content/CodeLearnGame.Common/monaco/min/vs/loader.js"></script>
+<script>
+    require.config({
+        paths: {
+            "vs": "_content/CodeLearnGame.Common/monaco/min/vs"
+        }
+    })
+</script>
+<script src="_content/CodeLearnGame.Common/monaco/min/vs/editor/editor.main.nls.js"></script>
+<script src="_content/CodeLearnGame.Common/monaco/min/vs/editor/editor.main.js"></script>
+<script src="_content/CodeLearnGame.Common/js/code-editor.js"></script>
+
+<script src="_framework/blazor.webassembly.js"></script>
+<script src="_content/CodeLearnGame.Common/js/learn.js"></script>
+<script src="_content/CodeLearnGame.Common/js/utils.js"></script>
 </body>
 
 </html>
