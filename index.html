@@ -6,30 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Code Learn - Aprenda programação de maneira simples</title>
     <base href="/" />
-    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="_content/CodeLearnGame.Common/fonts/varela-round.css" rel="stylesheet">
     <link rel="stylesheet" href="_content/CodeLearnGame.Common/css/app.css" />
-    <!--<link rel="stylesheet" href="_content/CodeLearnGame.Common/monaco/min/vs/editor/editor.main.css">-->
     <link rel="icon" type="image/png" href="_content/CodeLearnGame.Common/images/icon.png" />
     <link href="CodeLearnGame.Web.styles.css" rel="stylesheet" />
+    <script>
+        if (location.href.endsWith('landing')) {
+            location.replace(location.href + '.html');
+        }
+    </script>
 </head>
 
 <body>
     <div id="app">
     </div>
     
-<!--    <script src="_content/CodeLearnGame.Common/monaco/min/vs/loader.js" async></script>-->
-<!--    <script>-->
-<!--        require.config({-->
-<!--            paths: {-->
-<!--                "vs": "_content/CodeLearnGame.Common/monaco/min/vs"   -->
-<!--            }-->
-<!--        })-->
-<!--    </script>-->
-<!--    <script src="_content/CodeLearnGame.Common/monaco/min/vs/editor/editor.main.nls.js" async></script>-->
-<!--    <script src="_content/CodeLearnGame.Common/monaco/min/vs/editor/editor.main.js" async></script>    -->
-<!--    <script src="_content/CodeLearnGame.Common/js/code-editor.js" async></script>    -->
-    
-    <script src="_framework/blazor.webassembly.js"></script>
+    <script src="_content/CodeLearnGame.Common/monaco/min/vs/loader.js"></script>
+    <script>
+        require.config({
+            paths: {
+                "vs": "_content/CodeLearnGame.Common/monaco/min/vs"   
+            }
+        })
+    </script>
+
+    <script src="_framework/blazor.webassembly.js" async></script>
+
     <script>
         function loadScript(path) {
             let script = document.createElement('script');
@@ -43,6 +45,20 @@
             link.href = path;
             link.rel = "stylesheet";
             document.head.appendChild(link);
+        }
+        
+        function configMonaco() {
+            let script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.textContent = `
+                    require.config({
+                        paths: {
+                            "vs": "_content/CodeLearnGame.Common/monaco/min/vs"
+                        }
+                    });
+                `;
+            document.body.appendChild(script);
+        
         }
     </script>
 </body>
