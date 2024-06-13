@@ -1,0 +1,1 @@
+function playAudio(o){let l=new Audio(o);l.play()}function scrollTo(o){let l=document.getElementById(o);l&&l.scrollIntoView({behavior:"smooth",block:"end"})}function scrollToTop(){document.body.scrollTop=document.documentElement.scrollTop=0}

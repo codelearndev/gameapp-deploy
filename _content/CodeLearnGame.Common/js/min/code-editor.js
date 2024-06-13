@@ -1,0 +1,1 @@
+let monacoOptions={language:"html",automaticLayout:!0,minimap:{enabled:!1},value:""},editor;function initializeMonacoEditor(o,t,e){t&&(monacoOptions.language=t),e&&(monacoOptions.value=e),editor=monaco.editor.create(document.getElementById(o),monacoOptions)}function getEditorValue(){return editor.getValue()}
