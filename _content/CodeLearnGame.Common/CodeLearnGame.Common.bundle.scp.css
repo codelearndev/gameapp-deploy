@@ -663,16 +663,11 @@ footer[b-tmftp0xvzd] {
 .page[b-f7n85yxdlv] {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     align-items: center;
     justify-content: center;
     padding: 0 10px;
-}
-  
-.logo[b-f7n85yxdlv] {
-    position: absolute;
-    top: 0;
 }
 /* _content/CodeLearnGame.Common/Layout/EmptyLayout.razor.rz.scp.css */
 .page[b-psk2g7x57q] {

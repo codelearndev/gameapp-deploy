@@ -46,20 +46,6 @@
             link.rel = "stylesheet";
             document.head.appendChild(link);
         }
-        
-        function configMonaco() {
-            let script = document.createElement('script');
-            script.type = 'text/javascript';
-            script.textContent = `
-                    require.config({
-                        paths: {
-                            "vs": "_content/CodeLearnGame.Common/monaco/min/vs"
-                        }
-                    });
-                `;
-            document.body.appendChild(script);
-        
-        }
     </script>
 </body>
 
