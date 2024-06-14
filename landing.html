@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Code Learn - Aprenda programação de maneira simples</title>
     <base href="/" />
-    <link rel="icon" type="image/png" href="_content/CodeLearnGame.Common/images/icon.png" />
+    <link href="_content/CodeLearnGame.Common/fonts/varela-round.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="_content/CodeLearnGame.Common/images/icon-min.png" />
+    <link rel="stylesheet" href="./css/landing.css" />
     <script>
         if (window.history && window.history.pushState) {
             window.history.pushState("", "", "/landing");
@@ -15,9 +17,64 @@
 </head>
 
 <body>
+    <header>
+        <img src="_content/CodeLearnGame.Common/images/logo-01-min.png" alt="Logotipo da Code Learn" />
+    </header>
+    <main class="flex column">
+        <section class="flex center wrap">
+            <img src="images/mockup-mobile01.png" alt="Code Learn em um Dispositivo Móvel" class="mobile-phone"/>
+            <div class="call-to-action-container">
+                <h2>Aprenda programação de maneira <span id="animated-word">simples</span>!</h2>
+                <div class="button-container">
+                    <a class="button primary-btn" href="register">COMEÇAR AGORA</a>
+                    <a class="button secondary-btn" href="login">JÁ TENHO CONTA</a>
+                </div>
 
-    <h1>Olá mundo</h1>
+            </div>
+        </section>
+<!--        <section>-->
+<!--            <div>-->
+<!--                <div>-->
+<!--                    <h2>Metodologia Interativa e Gamificada</h2>-->
+<!--                    <p>Aprender a programar não precisa ser chato. No App Code Learn, cada lição é transformada em um desafio emocionante. -->
+<!--                        Evolua, desbloqueie novos níveis e veja seu progresso de forma clara e motivadora.</p>-->
+<!--                </div>-->
+<!--                <img src="" />-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                <img src="" />-->
+<!--                <div>-->
+<!--                    <h2>Pratique e Codifique</h2>-->
+<!--                    <p>Coloque em prática o que aprendeu com nosso editor de código integrado. Escreva, execute e veja os resultados do seu código em tempo real. </p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </section>-->
+        <section>
+            <!--Depoimentos-->
+        </section>
+        <section>
+            <!--Outra CTA-->
+        </section>
+    </main>
+    <footer></footer>
     
+    <script>
+        const animatedWord = document.getElementById("animated-word");
+        const words = ["gratuita", "eficiente", "divertida", "interativa", "diferente", "simples"]
+        
+        function handleWithWordAnimation() {
+            let animatedIndex = 0;
+            setInterval(() => {
+                if (animatedIndex === words.length)
+                    animatedIndex = 0;
+
+                animatedWord.textContent = words[animatedIndex];
+                animatedIndex++;
+            }, 3000);
+        }
+
+        handleWithWordAnimation();
+    </script>
     <script src="https://accounts.google.com/gsi/client" async></script>
     <script src="_framework/blazor.webassembly.js" async></script>
     <script src="./js/min/google-auth.js" async></script>
