@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Learn - Aprenda programação de maneira simples</title>
+    <base href="/" />
+    <link href="_content/CodeLearnGame.Common/fonts/varela-round.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="_content/CodeLearnGame.Common/images/icon-min.png" />
+    <link rel="stylesheet" href="./css/landing.css" />
+    <script>
+        if (window.history && window.history.pushState) {
+            window.history.pushState("", "", "/politica-privacidade");
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <img style="cursor: pointer" src="_content/CodeLearnGame.Common/images/logo-01-min.png" alt="Logotipo da Code Learn"  onclick="navigateTo('landing')" />
+    </header>
+    <div id="main">
+        <main class="flex">
+            <h1>Política de Privacidade</h1>
+            <div class="flex column" style="gap: 20px">
+                <p>Última atualização: 01 de Junho de 2023.</p>
+                <p>Nós, Code Learn LTDA, valorizamos a sua privacidade e estamos comprometidos em proteger as informações pessoais que você nos fornece por meio do nosso site. Esta Política de Privacidade descreve como coletamos, usamos, divulgamos e protegemos essas informações. Ao utilizar nosso site, você concorda com os termos desta política.</p>
+                <h2>1. Informações que coletamos</h2>
+                <h3>1.1 Informações de identificação pessoal:</h3>
+                <p>Podemos coletar informações de identificação pessoal, como nome, endereço de e-mail, número de telefone e outras informações semelhantes, quando você as fornece voluntariamente por meio de formulários de contato, inscrição em boletins informativos, criação de contas ou outras interações com nosso site.</p>
+                <h3>1.2 Informações de uso:</h3>
+                <p>Coletamos informações sobre a forma como você interage com nosso site, como os tipos de conteúdo que visualiza, as páginas que acessa, as ações que realiza e outras informações relacionadas ao uso do site. Essas informações podem ser coletadas por meio de cookies e tecnologias semelhantes.</p>
+                <h2>2. Uso das informações</h2>
+                <h3>2.1 Utilizamos as informações coletadas para:</h3>
+                <p>Fornecer e melhorar nossos serviços, personalizar sua experiência no site, responder a suas solicitações, enviar comunicações relacionadas aos nossos serviços e fornecer informações importantes sobre alterações em nossas políticas.</p>
+                <h3>2.2 Podemos utilizar informações de uso para:</h3>
+                <p>Analisar tendências, administrar o site, rastrear o movimento dos usuários e coletar informações demográficas. Esses dados são usados de forma agregada e anônima, não identificando pessoalmente nenhum usuário específico.</p>
+                <h2>3. Compartilhamento de informações</h2>
+                <p>3.1 Não vendemos, alugamos ou compartilhamos suas informações pessoais com terceiros, exceto conforme descrito nesta política ou quando obtivermos seu consentimento.</p>
+                <p>3.2 Podemos compartilhar suas informações pessoais com provedores de serviços terceirizados que nos auxiliam na operação do site, desde que eles concordem em manter essas informações confidenciais.</p>
+                <p>3.3 Também podemos divulgar suas informações pessoais quando exigido por lei, mediante solicitação de autoridades governamentais ou para proteger nossos direitos legais.</p>
+                <h2>4. Proteção de informações</h2>
+                <p>4.1 Implementamos medidas de segurança adequadas para proteger as informações pessoais que coletamos e armazenamos. No entanto, observe que nenhuma transmissão de dados pela Internet ou sistema de armazenamento eletrônico é 100% seguro. Portanto, não podemos garantir a segurança absoluta das informações.</p>
+                <h2>5. Links para sites de terceiros</h2>
+                <p>5.1 Nosso site pode conter links para sites de terceiros. Esta Política de Privacidade não se aplica a esses sites, portanto, recomendamos que você revise as políticas de privacidade desses sites antes de fornecer qualquer informação pessoal.</p>
+                <h2>6. Alterações nesta política</h2>
+                <p>6.1 Podemos atualizar esta Política de Privacidade periodicamente. Quaisquer alterações entrarão em vigor quando publicadas nesta página. Recomendamos que você revise esta política regularmente para se manter informado sobre nossas práticas de privacidade.</p>
+                <h2>7. Contato</h2>
+                <p>7.1 Se você tiver alguma dúvida ou preocupação sobre esta Política de Privacidade ou sobre como tratamos suas informações pessoais, entre em contato conosco por e-mail em contato@codelearn.com.br</p>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div>
+            <div class="footer-container">
+                <div>
+                    <h3>Produtos</h3>
+                    <ul>
+                        <li><a href="https://codelearn.com.br/">Curso Front-end Essencial</a></li>
+                        <li><a href="https://codelearn.com.br/e-books/renda-extra-com-tecnologia/page">eBook Renda Extra com Tecnologia</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Ajuda</h3>
+                    <ul>
+                        <li style="color: var(--blue)">Política de Privacidade</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Redes Sociais</h3>
+                    <ul>
+                        <li><a href="https://www.instagram.com/codelearnbr/">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p style="color: var(--gray)">© 2024 Code Learn</p>
+        </div>
+    </footer>
+    
+    <script>
+        const animatedWord = document.getElementById("animated-word");
+        const words = ["gratuita", "eficiente", "divertida", "interativa", "diferente", "simples"]
+        
+        function handleWithWordAnimation() {
+            let animatedIndex = 0;
+            setInterval(() => {
+                if (animatedIndex === words.length)
+                    animatedIndex = 0;
+
+                animatedWord.textContent = words[animatedIndex];
+                animatedIndex++;
+            }, 3000);
+        }
+        
+        function navigateTo(path) {
+            window.location.href = path;
+        }
+
+        handleWithWordAnimation();
+    </script>
+    <script src="https://accounts.google.com/gsi/client" async></script>
+    <script src="_framework/blazor.webassembly.js" async></script>
+    <script src="./js/min/google-auth.js" async></script>
+</body>
+
+</html>

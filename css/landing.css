@@ -9,14 +9,24 @@
     --text-color: white;
     --green: rgb(14, 190, 117);
     --gray: #37464f;
+    --blue: #48bff8;
 }
 
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: "Varela Round", sans-serif;
-    overflow-y: scroll !important;
-    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 header {
@@ -43,7 +53,7 @@ header img {
 .mobile-phone {
     width: 400px;
     rotate: -15deg;
-    z-index: -1;
+    z-index: -100;
     transform: scale(1.2);
 }
 
@@ -75,14 +85,16 @@ header img {
 }
 
 main {
+    flex-wrap: wrap;
     margin: 40px;
+    max-width: 1160px;
 }
 
 a {
     text-decoration: none;
 }
 
-.button {
+button {
     height: 50px;
     border-radius: 15px;
     font-weight: bolder;
@@ -95,12 +107,12 @@ a {
     cursor: pointer;
 }
 
-.button:active {
+button:active {
     border-bottom: 0 !important;
 }
 
 .primary-btn {
-    background-color: #48bff8;
+    background-color: var(--blue);
     color: #141F23 !important;
 }
 
@@ -119,7 +131,8 @@ a {
 }
 
 #animated-word {
-    color: #6BDB23;
+    /*color: #6BDB23;*/
+    color: var(--green);
     animation: fade 3s infinite;
 }
 
@@ -128,11 +141,147 @@ a {
     50% { opacity: 1; }
 }
 
-@media screen and (max-width: 1000px) {
-    .call-to-action-container .button-container {
-        width: 100%;
+.info-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-container div {
+    width: 550px;
+    display: flex;
+    gap: 25px;
+    flex-direction: column;
+}
+
+.laptop {
+    width: 500px;
+}
+
+.info-container .mobile-phone {
+    rotate: 0deg;
+    width: 300px;
+}
+
+.info-container p {
+    line-height: 25px;
+}
+
+.info-container h2 {
+    font-size: 35px;
+}
+
+.cta-banner {
+    background: var(--green);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 100px 0;
+    padding: 40px;
+}
+
+.cta-banner div {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cta-banner h2 {
+    color: var(--bg-color);
+    font-size: 28px;
+}
+
+.cta-banner button {
+    width: 250px;
+    background: white;
+    color: var(--bg-color);
+    border-color: white;
+    border-bottom-color: #cfcfcf !important;
+}
+
+footer {
+    border-top: 2px solid var(--gray);
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    gap: 2rem;
+    align-items: center;
+}
+
+footer div {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: 100%;
+}
+
+.footer-container {
+    display: flex;
+    gap: 5rem;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.footer-container div {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.footer-container ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-container h3 {
+    font-size: 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: var(--blue);
+}
+
+/*MOBILE CSS*/
+@media screen and (max-width: 1200px) {
+    .info-container {
+        flex-direction: column;
     }
 
+    .cta-banner {
+        margin: 0;
+    }
+    
+    .info-container img {
+        order: 1;
+    }
+    
+    main {
+        gap: 100px;
+    }
+    
+    section:nth-child(1) {
+        flex-direction: column;
+    }
+    
+    .info-container .mobile-phone {
+        margin: 50px;
+    }
 }
 
 @media screen and (max-width: 700px) {
@@ -140,6 +289,23 @@ a {
         width: 350px;
     }
 
+    .info-container .mobile-phone {
+        width: 250px;
+    }
+    
+    .laptop {
+        transform: scale(1.2);
+        width: 350px;
+        z-index: -1;
+    }
+
+    .info-container div {
+        width: 100%;
+    }
+
+    .call-to-action-container, .call-to-action-container .button-container {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -164,6 +330,10 @@ a {
         font-size: 30px;
     }
     
+    .info-container h2 {
+        font-size: 30px;
+    }
+    
     section:nth-child(1) {
         gap: 25px;
     }
@@ -172,17 +342,46 @@ a {
         width: 220px;
         transform: scale(1.4);
     }
+
+    .info-container .mobile-phone {
+        width: 200px;
+    }
+
+    .laptop {
+        width: 300px;
+    }
+
+
+    .cta-banner h2 {
+        font-size: 25px;
+    }
+
+    .cta-banner button {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 450px) {
     .mobile-phone {
         width: 190px;
     }
+
+    .info-container .mobile-phone {
+        width: 180px;
+    }
+
+    .cta-banner h2 {
+        font-size: 20px;
+    }
 }
 
 @media screen and (max-width: 400px) {
     .call-to-action-container h2 {
         font-size: 28px;
+    }
+
+    .info-container .mobile-phone {
+        width: 150px;
     }
 }
 
