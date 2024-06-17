@@ -18,3 +18,7 @@ function scrollTo(elementId) {
 function scrollToTop() {
     document.body.scrollTop = document.documentElement.scrollTop = 0;
 }
+
+function isMobile() {
+    return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}

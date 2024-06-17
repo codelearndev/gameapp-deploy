@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "CodeLearnGame.Web",
   "resources": {
-    "hash": "sha256-cOTU+JvsougOW3Ob6pFZ8uHMrVvk9KI1TV4MEFyFnMM=",
+    "hash": "sha256-a1CwrK8S7zCGfKllZA1FR4dA3nm5fgrQlqIVjl+ZE04=",
     "jsModuleNative": {
       "dotnet.native.8.0.6.d7k21ulgwi.js": "sha256-YU6M9+jtDVnB8/wtrgIndOstzNh778Ls8g9XnbjorSk="
     },
@@ -20,8 +20,8 @@
       "AngleSharp.Css.wasm": "sha256-4Diue02BcmgMCs2GbdIncDbObwTBOLgvd6XPH0wuoiE=",
       "AngleSharp.wasm": "sha256-soBqVeDOe3AZki4mQ1fPzAk735KqEsg7WrIFlX30woI=",
       "Blazored.LocalStorage.wasm": "sha256-OaMAAd5n7ORfyur5e3QIyEVKJ76MKIvwbg7/icnnYcU=",
-      "CodeLearnGame.Common.wasm": "sha256-sIzYGjH9LxHYIskCj0MaldrrMOhc90x6JWPe0zf16o4=",
-      "CodeLearnGame.Web.wasm": "sha256-619TP5CqGYjeZOgz9c4ovPs1D371YRsFWlVGrJFXxKw=",
+      "CodeLearnGame.Common.wasm": "sha256-U0bmOS5geXY90LBoqYqYOoy++G12NXbJIjDAF75ioZM=",
+      "CodeLearnGame.Web.wasm": "sha256-Bnexa5PZLh5iaFZaG2d8JbAS63QxbnqDSqT5szj1IZY=",
       "HtmlSanitizer.wasm": "sha256-wkJRjCrCYz9RaLbQ81Im3k01iq1dvvCZEzZj69mMaaw=",
       "Microsoft.AspNetCore.Authorization.wasm": "sha256-s9GVXwxk54dQl2rDy/ceilSgKRA2EsurG8PqOvE9j9A=",
       "Microsoft.AspNetCore.Components.Authorization.wasm": "sha256-gzhRTI5kSwKSpj2Dlm/UDyi/cvMlFE97oY0Bp07C8sk=",
@@ -224,6 +224,10 @@
   },
   "cacheBootResources": true,
   "debugLevel": 0,
+  "appsettings": [
+    "../appsettings.Development.json",
+    "../appsettings.json"
+  ],
   "globalizationMode": "sharded",
   "extensions": {
     "blazor": {}
